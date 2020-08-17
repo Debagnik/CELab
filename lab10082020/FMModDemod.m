@@ -40,7 +40,7 @@ dem = diff(y);
 dem = [0,dem];
 rect_dem = abs(dem)
 
-[b,a]=butter(10,0.06);
+[b, a]=butter(10,0.06);
 rec = filter(b,a,rect_dem);
 
 subplot(4,1,4)
