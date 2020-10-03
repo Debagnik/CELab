@@ -5,11 +5,11 @@ clc
 close all
 clear all
 
-am=5        %Amplitude
-fm=2        %Frequency of the signal
-fs=100      %No. Of samples
-t=0:1/fs:2  %Time
-x=am*sawtooth(2*pi*fm*t) %Message signal (Sawtooth)
+am = 5        %Amplitude
+fm = 2        %Frequency of the signal
+fs = 1000      %No. Of samples
+t = 0:0.001:2  %Time
+x = am*sawtooth(2*pi*fm*t,0.5) %Message signal (Sawtooth)
 
 subplot(3,1,1)
 plot(t,x,'r')
@@ -17,7 +17,9 @@ xlabel('time')
 ylabel('Amplitude')
 title('Message Signal')
 
-d=(2*pi*am*fm)/fs
+d = (2*pi*am*fm)/fs
+
+%Quantization of the signal
 
 for n=1:length(x)
   if n==1
@@ -55,3 +57,9 @@ axis([0 2 -1 2])
 xlabel('time')
 ylabel('amplitude')
 title('Delta modulated signal')
+
+%Demodulation
+
+
+
+
