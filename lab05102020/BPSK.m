@@ -5,7 +5,7 @@ clc
 clear all
 close all
 
-%Generating a psudo-random number as message signal
+%Generating a pseudo-random number as message signal
 
 n = input('Enter the length of data in bits:    ')
 data = randi([0 1], 1, n)
