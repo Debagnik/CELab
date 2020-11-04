@@ -100,13 +100,13 @@ if (graphics > 0)
     figure
 
     esps1=abs(fft(s1));
-    subplot(3,1,1),plot(esps1),grid on,zoom,title('Signal Spectrum 1');
+    subplot(3,1,1),plot(esps1),grid on,zoom,title('Signal Spectrum 1');xlabel("Frequency, Hz");ylabel("Amplitude, dB");
 
     esps2=abs(fft(s2));
-    subplot(3,1,2),plot(esps2),grid on,zoom,title('Signal Spectrum 2');
+    subplot(3,1,2),plot(esps2),grid on,zoom,title('Signal Spectrum 2');xlabel("Frequency, Hz");ylabel("Amplitude, dB");
 
     esps3=abs(fft(s3));
-    subplot(3,1,3),plot(esps3),grid on,zoom,title('Signal Spectrum 3');
+    subplot(3,1,3),plot(esps3),grid on,zoom,title('Signal Spectrum 3');xlabel("Frequency, Hz");ylabel("Amplitude, dB");
 end;
 
 
@@ -125,13 +125,13 @@ if (graphics > 0)
     figure
 
     esps1=abs(fft(s1));
-    subplot(3,1,1),plot(esps1),grid on,zoom,title('Signal spectrum 1 filtered');
+    subplot(3,1,1),plot(esps1),grid on,zoom,title('Signal spectrum 1 filtered');xlabel("Frequency, Hz");ylabel("Amplitude, dB");
 
     esps2=abs(fft(s2));
-    subplot(3,1,2),plot(esps2),grid on,zoom,title('Signal spectrum 2 filtered');
+    subplot(3,1,2),plot(esps2),grid on,zoom,title('Signal spectrum 2 filtered');xlabel("Frequency, Hz");ylabel("Amplitude, dB");
 
     esps3=abs(fft(s3));
-    subplot(3,1,3),plot(esps3),grid on,zoom,title('Signal spectrum 3 filtered');
+    subplot(3,1,3),plot(esps3),grid on,zoom,title('Signal spectrum 3 filtered');xlabel("Frequency, Hz");ylabel("Amplitude, dB");
 end
 
 FLAG = input('STEP 4, reproduce the signals after passing them through the filter');
@@ -178,13 +178,13 @@ if (graphics > 0)
     figure
 
     esps1=abs(fft(s1mod));
-    subplot(3,1,1),plot(esps1),grid on,zoom,title('Signal spectrum1 modulated');
+    subplot(3,1,1),plot(esps1),grid on,zoom,title('Signal spectrum1 modulated');xlabel("Frequency, Hz");ylabel("Amplitude, dB");
 
     esps2=abs(fft(s2mod));
-    subplot(3,1,2),plot(esps2),grid on,zoom,title('Signal spectrum2 modulated');
+    subplot(3,1,2),plot(esps2),grid on,zoom,title('Signal spectrum2 modulated');xlabel("Frequency, Hz");ylabel("Amplitude, dB");
 
     esps3=abs(fft(s3mod));
-    subplot(3,1,3),plot(esps3),grid on,zoom,title('Signal spectrum2 modulated');
+    subplot(3,1,3),plot(esps3),grid on,zoom,title('Signal spectrum2 modulated');xlabel("Frequency, Hz");ylabel("Amplitude, dB");
 
 end
 FLAG = input('STEP 6, The modulated signals are filtered in the determined band and summed');
@@ -203,16 +203,16 @@ if (graphics > 0)
     figure
 
     esps1=abs(fft(fs1));
-    subplot(4,1,1),plot(esps1),grid on,zoom,title('Signal spectrum1 modulated and filtered');
+    subplot(4,1,1),plot(esps1),grid on,zoom,title('Signal spectrum1 modulated and filtered');xlabel("Frequency, Hz");ylabel("Amplitude, dB");
 
     esps2=abs(fft(fs2));
-    subplot(4,1,2),plot(esps2),grid on,zoom,title('Signal spectrum2 modulated and filtered');
+    subplot(4,1,2),plot(esps2),grid on,zoom,title('Signal spectrum2 modulated and filtered');xlabel("Frequency, Hz");ylabel("Amplitude, dB");
 
     esps3=abs(fft(fs3));
-    subplot(4,1,3),plot(esps3),grid on,zoom,title('Signal spectrum3 modulated and filtered');
+    subplot(4,1,3),plot(esps3),grid on,zoom,title('Signal spectrum3 modulated and filtered');xlabel("Frequency, Hz");ylabel("Amplitude, dB");
 
     espf=abs(fft(x));
-    subplot(4,1,4),plot(espf),grid on,zoom,title('Summed Spectrum')
+    subplot(4,1,4),plot(espf),grid on,zoom,title('Summed Spectrum');xlabel("Frequency, Hz");ylabel("Amplitude, dB");
 
 end
 
@@ -224,7 +224,7 @@ if (graphics > 0)
     figure
 
     esps1=abs(fft(x));
-    subplot(2,1,1),plot(esps1),grid on,zoom,title('Full signal spectrum');
+    subplot(2,1,1),plot(esps1),grid on,zoom,title('Full signal spectrum');xlabel("Frequency, Hz");ylabel("Amplitude, dB");
     
 end 
 
@@ -234,7 +234,7 @@ x = awgn(x, signal_to_noise_ratio );
 if (graphics > 0)
    
     esps1=abs(fft(x));
-    subplot(2,1,2),plot(esps1),grid on,zoom,title('Full signal spectrum plus some noise'); 
+    subplot(2,1,2),plot(esps1),grid on,zoom,title('Full signal spectrum plus some noise'); xlabel("Frequency, Hz");ylabel("Amplitude, dB");
    
 end 
 
@@ -256,13 +256,13 @@ if (graphics > 0)
     figure
 
     esps1=abs(fft(demuxs1));
-    subplot(3,1,1),plot(esps1),grid on,zoom,title('Signal spectrum1 filtered');
+    subplot(3,1,1),plot(esps1),grid on,zoom,title('Signal spectrum1 filtered');xlabel("Frequency, Hz");ylabel("Amplitude, dB");
 
     esps2=abs(fft(demuxs2));
-    subplot(3,1,2),plot(esps2),grid on,zoom,title('Signal spectrum2 filtered');
+    subplot(3,1,2),plot(esps2),grid on,zoom,title('Signal spectrum2 filtered');xlabel("Frequency, Hz");ylabel("Amplitude, dB");
 
     esps3=abs(fft(demuxs3));
-    subplot(3,1,3),plot(esps3),grid on,zoom,title('Signal spectrum3 filtered');
+    subplot(3,1,3),plot(esps3),grid on,zoom,title('Signal spectrum3 filtered');xlabel("Frequency, Hz");ylabel("Amplitude, dB");
 end
 
 FLAG = input('STEP 9, each recovered band is demodulated to return the signal to the indicated frequency');
@@ -285,13 +285,13 @@ if (graphics > 0)
     figure
 
     esps1=abs(fft(demods1));
-    subplot(3,1,1),plot(esps1),grid on,zoom,title('Demodulated signal1 spectrum');
+    subplot(3,1,1),plot(esps1),grid on,zoom,title('Demodulated signal1 spectrum');xlabel("Frequency, Hz");ylabel("Amplitude, dB");
 
     esps2=abs(fft(demods2));
-    subplot(3,1,2),plot(esps2),grid on,zoom,title('Demodulated signal2 spectrum');
+    subplot(3,1,2),plot(esps2),grid on,zoom,title('Demodulated signal2 spectrum');xlabel("Frequency, Hz");ylabel("Amplitude, dB");
 
     esps3=abs(fft(demods3));
-    subplot(3,1,3),plot(esps3),grid on,zoom,title('Demodulated signal3 spectrum');
+    subplot(3,1,3),plot(esps3),grid on,zoom,title('Demodulated signal3 spectrum');xlabel("Frequency, Hz");ylabel("Amplitude, dB");
 
 end
 
@@ -310,13 +310,13 @@ if (graphics > 0)
     figure
 
     esps1=abs(fft(demods1));
-    subplot(3,1,1),plot(esps1),grid on,zoom,title('Demodulated signal1 spectrum');
+    subplot(3,1,1),plot(esps1),grid on,zoom,title('Demodulated signal1 spectrum');xlabel("Frequency, Hz");ylabel("Amplitude, dB");
 
     esps2=abs(fft(demods2));
-    subplot(3,1,2),plot(esps2),grid on,zoom,title('Demodulated signal2 spectrum');
+    subplot(3,1,2),plot(esps2),grid on,zoom,title('Demodulated signal2 spectrum');xlabel("Frequency, Hz");ylabel("Amplitude, dB");
 
     esps3=abs(fft(demods3));
-    subplot(3,1,3),plot(esps3),grid on,zoom,title('Demodulated signal3 spectrum');
+    subplot(3,1,3),plot(esps3),grid on,zoom,title('Demodulated signal3 spectrum');xlabel("Frequency, Hz");ylabel("Amplitude, dB");
 
 end 
 
@@ -333,6 +333,3 @@ playblocking(playerbeep);
 
 player6 = audioplayer(demods3,g3);
 playblocking(player6);
-
-
-
